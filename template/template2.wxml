@@ -1,0 +1,7 @@
+<template name="wang">
+  <view class="wang">
+    <view>{{item.a}}ww1wwww</view>
+    <view>{{item.a1}}ww2wwwww</view>
+   
+  </view>
+</template>

@@ -1,0 +1,274 @@
+/** 样式重置 **/
+page, text, view, swiper, icon, checkbox-group, checkbox, label, picker,
+radio-group, radio, slider, switch, textarea, navigator, image, video, audio,
+map, button {
+  /* box-sizing: border-box; */
+  /* color: #000; */
+  margin: 0;
+  padding: 0;
+}
+
+page {
+  /* box-sizing: border-box; */
+  color: #000;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  text-align: left;
+  padding: 0 10rpx;
+  margin: 0;
+}
+
+.input-placeholder {
+  color: #ccc;
+}
+
+rich-text {
+  color: #000;
+}
+
+/* 需要转码文本（行数间需要空格则后台转码div便签间加<br />）*/
+
+textarea {
+  color: #000;
+  width: 100%;
+}
+
+
+
+/*表单placeholder默认样式*/
+
+.flex-box {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+.flex-5 {
+  flex: 5;
+}
+
+.app-dn {
+  display: none;
+}
+
+.app-db {
+  display: block;
+}
+
+.app-fl {
+  float: left;
+}
+
+.app-fr {
+  float: right;
+}
+
+.app-overflow {
+  overflow: hidden;
+}
+
+/* 设置一致性按钮 */
+
+.app-btn {
+  height: 92rpx;
+  font-size: 36rpx;
+  color: #fff;
+  background-color: #ffba17;
+  border-radius: 100rpx;
+  line-height: 92rpx;
+  border: none;
+}
+
+/* 最多显示几行 */
+
+.app-maxRow {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* -webkit-line-clamp: 2; 行数单独设置 */
+
+/* 占用空白空间  */
+
+.marin-topbottom120 {
+  margin-top: 120rpx;
+  margin-bottom: 120rpx;
+}
+
+.empty-120box {
+  width: 100%;
+  height: 120rpx;
+}
+
+.fixed-bottom100 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  line-height: 100rpx;
+  height: 100rpx;
+  z-index: 999;
+}
+
+/* 清空默认button 样式  */
+
+button {
+  background-color: #ccc;
+  color: #000;
+  width: 120rpx !important;
+  font-weight: 400 !important;
+  font-size: 24rpx !important;
+  padding: 0 !important;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*  去查看等多的小箭头  */
+
+.gomore-icon {
+  position: absolute;
+  top: 40rpx;
+  right: 30rpx;
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  border-right: 5rpx solid #c7c7cc;
+  border-bottom: 5rpx solid #c7c7cc;
+  transform: rotate(-45deg);
+}
+
+/* 高度使用的 搜索框  */
+
+.top-search {
+  display: flex;
+  position: relative;
+  padding: 20rpx 30rpx 20rpx 30rpx;
+  width: 100%;
+  height: 100rpx;
+  background-color: #eeeef4;
+  vertical-align: middle;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.top-search .input-box {
+  position: relative;
+  flex: 6;
+}
+
+.top-search .input-box input {
+  padding: 0 70rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  border-radius: 4rpx;
+  text-align: left;
+}
+
+.top-search .input-box .search-icon {
+  position: absolute;
+  top: 15rpx;
+  left: 22rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.top-search .input-box .scan-add {
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.top-search .search-btn {
+  flex: 1;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  color: #20a0ff;
+  text-align: right;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+
+
+/* 页面公共的样式 */
+
+/* 新闻收藏列表公共的样式 */
+.new-List {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.news {
+  width: 90%;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10rpx 0;
+}
+.news image {
+  width: 100rpx;
+  height: 100rpx;
+  flex-shrink: 0;
+}
+.news text {
+  flex-grow: 1;
+  text-align: left;
+  height: 100rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 25rpx;
+  line-height: 100rpx;
+
+}

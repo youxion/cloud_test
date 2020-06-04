@@ -1,0 +1,17 @@
+<!--pages/smallProject/pages/movie/movie.wxml-->
+<view>
+  <video id="myVedio" controls src="{{src}}" enable-danmu danmu-btn></video>
+  <view class="barrage">
+    <input placeholder="请输入弹幕内容" bindinput="getDanmu"></input>
+    <button bindtap="sendDanmu">发送弹幕</button>
+  </view>
+  <button class="btn-text">1111111111</button>
+  <view class="movie_list">
+    <view class="movie_info" wx:for="{{list}}" wx:key="video{{index}}"
+    data-url="item.videoUrl" bindtap="playVideo">
+      <image src="/pages/smallProject/images/movie/play.png "></image>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+</view>
+

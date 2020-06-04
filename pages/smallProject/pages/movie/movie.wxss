@@ -1,0 +1,56 @@
+/* pages/smallProject/pages/movie/movie.wxss */
+#myVedio {
+  width: 100%;
+}
+.barrage {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.barrage button{
+  width: 120rpx !important;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background-color: rgba(154, 122, 58);
+}
+.btn-text {
+  margin: 0;
+  width: 160rpx ;
+  height: 80rpx;
+  color: #fff;
+
+}
+
+.barrage input{
+  flex-grow: 1;
+  /* width: 160rpx; */
+  width: 100rpx;
+  height: 80rpx;
+  border: 1rpx solid rgba(154, 122, 58);
+}
+.movie_list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.movie_info {
+  display: flex; 
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%; 
+  height: 88rpx;  
+  border-bottom: 1px solid rgb(224, 219, 213);
+}
+.movie_info image{
+  width: 44rpx; 
+  height: 44rpx;  
+}
+.movie_info text{
+  text-align: left;
+  margin-left: 40rpx;
+  flex-grow: 1;
+}

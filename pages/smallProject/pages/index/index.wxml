@@ -1,0 +1,6 @@
+<view class="login">
+  <image src="/pages/smallProject/images/index/lft01.jpg"></image>
+  <text>欢迎登录 wang</text>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserData">button</button>
+
+</view>

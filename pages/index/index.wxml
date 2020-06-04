@@ -1,0 +1,25 @@
+<!--pages/index/index.wxml-->
+<swiper class="swiperTop" indicator-dots="true" interval="3000" duration="500" >
+  <!-- <view wx:for="bannerImg" wx:key="index">
+    <swiper-item>
+      <image src="{{item.src}}"></image>
+    </swiper-item>
+  </view> -->
+  <swiper-item wx:for="{{bannerImg}}" wx:key="index">
+    <image src="{{item.src}}"></image>
+  </swiper-item>
+</swiper>
+
+ <view class="new-List">
+  <view class="news" wx:for="{{newList}}" wx:key="index" bindtap="toDetail" data-id="{{item.id}}"> 
+    <image src="{{item.poster}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view> 
+
+<view class="load_more">点击加载更多</view>
+
+<navigator class="toWeather" url="/pages/smallProject/pages/weather/weather" target="self" open-type="navigate">点击查看天气</navigator>
+<!-- 填写url时注意： 跳转的目标页面后面不能写 .wxml  -->
+
+<button class="getOpenid" bindtap="getOpenid">获取openId</button>

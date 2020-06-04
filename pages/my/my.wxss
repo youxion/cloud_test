@@ -1,0 +1,30 @@
+/* pages/my/my.wxss */
+.login{
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #3083ff;
+}
+.login image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+.title {
+  text-align: left;
+  width: 100%;
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+
+}
+.loginBtn {
+  width: 200rpx !important;
+  height: 50rpx;
+  line-height: 50rpx;
+}

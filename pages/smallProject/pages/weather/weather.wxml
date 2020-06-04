@@ -1,0 +1,46 @@
+<!--pages/smallProject/pages/weather/weather.wxml-->
+<view class="weather_box">
+  <picker mode="region" bindchange="changeRegion">
+    <view>{{region ? region : "北京市"}}</view>
+  </picker>
+  <text class="show_weather">{{weatherNow.tmp ? weatherNow.tmp : "26"}}℃ {{weatherNow.cond_txt ? weatherNow.cond_txt : "晴"}}</text>
+  <image class="picture" src="{{imgSrc}}"></image>    
+  <view class="detail">
+    <view>
+      <text class="name">湿度</text>
+      <text class="value">{{weatherNow.hum ? weatherNow.hum : "20"}}</text>
+    </view>
+    <view>
+      <text class="name">气压</text>
+      <text class="value">{{weatherNow.pres ? weatherNow.pres : "12"}} hPa</text>
+    </view>
+    <view>
+      <text class="name">能见度</text>
+      <text class="value">{{weatherNow.vis ? weatherNow.vis : "12"}}</text>
+    </view>
+    <view class="line"></view>
+    <view>
+      <text class="name">风向</text>
+      <text class="value">{{weatherNow.wind_dir ? weatherNow.wind_dir : "南风"}}</text>
+    </view>
+    <view>
+      <text class="name">风速</text>
+      <text class="value">{{weatherNow.wind_spd ? weatherNow.wind_spd : 25}} Km/h</text>
+    </view>
+    <view>
+      <text class="name">风力</text>
+      <text class="value">{{weatherNow.wind_sc ? weatherNow.wind_sc : "1"}} 级</text>
+    </view>
+    
+  </view>
+
+  <button class="addressDetail" bindtap="addressDetail">查看地图详情</button>
+
+  <import src="/template/template2"/>
+  <view class="wang">
+    <block wx:for="{{test}}" wx:key="index">
+      <template is="wang" data="{{item}}"></template>
+      <!-- 遍历test时，将对应的item对象传入template中渲染  -->
+    </block>
+  </view>
+</view>

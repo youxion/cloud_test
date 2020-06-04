@@ -1,0 +1,11 @@
+<!--pages/detail/detail.wxml-->
+<view class="news_detail">
+  <text class="title">{{article.title}}</text>
+  <image class="newsImg" src="{{article.poster}}"></image>
+  <view class="content">
+    <text wx:for="arrCon" wx:key="index">{{article.arrCon[index]}}</text>
+  </view>
+  <text class="date">{{article.add_date}}</text>
+  <button wx:if="{{isAdd}}" plain bindtap="cancleFavor">已经收藏</button>
+  <button wx:else plain bindtap="addFavor">未收藏</button>
+</view> 
