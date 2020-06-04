@@ -1,7 +1,7 @@
 <!--pages/smallProject/pages/weather/weather.wxml-->
 <view class="weather_box">
   <picker mode="region" bindchange="changeRegion">
-    <view>aaaa{{region ? region : "北京市"}}</view>
+    <view>{{region ? region : "北京市"}}</view>
   </picker>
   <text class="show_weather">{{weatherNow.tmp ? weatherNow.tmp : "26"}}℃ {{weatherNow.cond_txt ? weatherNow.cond_txt : "晴"}}</text>
   <image class="picture" src="{{imgSrc}}"></image>    
