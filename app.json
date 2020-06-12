@@ -1,21 +1,21 @@
 {
   "pages": [
+
     "pages/index/index",
-    
+
+    "pages/smallProject/pages/movie/movie",
+
+
+
     "pages/smallProject/pages/weather/weather",
-    
+
+    "pages/smallProject/pages/index/index",
+
     
     "pages/detail/detail",
     
     "pages/my/my",
     
-    
-    
-    
-    
-    
-    "pages/smallProject/pages/movie/movie",
-    "pages/smallProject/pages/index/index",
     "pages/logs/logs"
     
   ],

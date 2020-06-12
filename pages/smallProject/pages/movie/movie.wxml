@@ -1,13 +1,38 @@
 <!--pages/smallProject/pages/movie/movie.wxml-->
 <view>
-  <video id="myVedio" controls src="{{src}}" enable-danmu danmu-btn></video>
+  <view class="videoBox">
+    <video 
+      id="myVedio" 
+      controls="true"
+      loop="true"
+      src="{{src}}"
+      show-mute-btn="true"
+      title="王的视频"
+      enable-play-gesture="true"
+      vslide-gesture="true"
+      enable-auto-rotation="true"
+      show-screen-lock-button="true"
+      play-btn-position="center"
+      bindplay="palyHandle"
+      bindpause="pauseHandle"
+      binderror="errorHandle"
+      bindwaiting="wattingHandle"
+      bindprogress="progeressHandle"
+      bindloadedmetadata="loadMetaDataHandle"
+    ></video>
+    <view class="adv" wx:if="{{show}}">广告时间</view>
+  </view>
+  
+
+  
+
   <view class="barrage">
     <input placeholder="请输入弹幕内容" bindinput="getDanmu"></input>
     <button bindtap="sendDanmu">发送弹幕</button>
   </view>
   <button class="btn-text">1111111111</button>
   <view class="movie_list">
-    <view class="movie_info" wx:for="{{list}}" wx:key="video{{index}}"
+    <view class="movie_info" wx:for="{{list}}" wx:key="index"
     data-url="item.videoUrl" bindtap="playVideo">
       <image src="/pages/smallProject/images/movie/play.png "></image>
       <text>{{item.title}}</text>

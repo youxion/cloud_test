@@ -5,12 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: {}
 
   },
 
   /* 获取用户的数据信息 */ 
-  getUserData: (e) => {
+  getUserData:  function (e) {
     console.log(e.detail)
+
+     e.detail.userInfo;
+     this.setData({
+       userInfo: e.detail.userInfo
+     })
 
   },
 

@@ -1,6 +1,9 @@
 // pages/index/index.js
 const common = require("../../utils/comment.js");
 
+//获取应用实例
+const app = getApp();
+
 Page({
 
   /**
@@ -23,9 +26,21 @@ Page({
         src: "/images/index/banner/4.jpg"
       }
     ],
-    newList: []
+    newList: [],
+    userInfo: {}
 
   },
+
+  
+  /* 获取用户的数据信息 */ 
+  getUserData:  function (e) {
+    app.globalData.userInfo = e.detail.userInfo; //=======
+    console.log(app.globalData.userInfo)
+     this.setData({
+       userInfo: e.detail.userInfo
+     })
+  },
+
   toDetail: (e) => {
     console.log(e) 
     let id = e.currentTarget.dataset.id
@@ -54,10 +69,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+
+    if (app.globalData.userInfo) {
+      console.log(app.globalData.userInfo)
+      this.setData({
+        userInfo: app.globalData.userInfo
+      })
+    }else {
+      console.log("no userInfo")
+    }
+
     let list = common.getNewList();
     this.setData({
       newList: list
     })
+
 
   },
 

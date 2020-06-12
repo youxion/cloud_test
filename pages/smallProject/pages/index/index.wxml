@@ -1,6 +1,8 @@
 <view class="login">
-  <image src="/pages/smallProject/images/index/lft01.jpg"></image>
-  <text>欢迎登录 wang</text>
-  <button open-type="getUserInfo" bindgetuserinfo="getUserData">button</button>
+  <image src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '/pages/smallProject/images/index/lft01.jpg'}}"></image>
+  <!-- <image wx:else src="/pages/smallProject/images/index/lft01.jpg"></image> -->
+  
+  <text open-type="getUserInfo" bindgetuserinfo="getUserData">{{userInfo.nickName ? userInfo.nickName : "请授权登录"}}</text>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserData">{{userInfo.nickName ? userInfo.nickName : "请授权登录"}}</button>
 
 </view>
