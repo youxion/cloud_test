@@ -34,7 +34,7 @@
     
   </view>
 
-  <button class="addressDetail" bindtap="addressDetail">查看地图详情</button>
+  <button class="addressDetail" bindtap="addressDetail">查看当前位置</button>
 
   <import src="/template/template2"/>
   <view class="wang">

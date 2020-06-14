@@ -52,7 +52,7 @@ Page({
     }
 
     this.setData({
-      number: keyNum,
+      number: keyNum-1,
       newList: list
 
     })

@@ -53,7 +53,7 @@
 } */
 
 .load_more {
-  width: 90%;
+  width: 90%!important;
   height: 60rpx;
   line-height: 60rpx;
   margin: 0 auto;

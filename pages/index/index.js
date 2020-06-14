@@ -1,5 +1,6 @@
 // pages/index/index.js
 const common = require("../../utils/comment.js");
+let newsData = getApp();
 
 //获取应用实例
 const app = getApp();
@@ -27,7 +28,54 @@ Page({
       }
     ],
     newList: [],
-    userInfo: {}
+    userInfo: {},
+    loadFlag: false,
+    loadMoreText: "点击加载更多",
+    page: 0
+  },
+
+  // 加载更多新闻
+  loadMoreNews: function () {
+    let page = this.data.page;
+    page = ++page;
+    let getDataLen = page * 5 + 3;
+    let allDataLen = newsData.data.news.total;
+    console.log(page)
+    console.log(newsData.data.news[page]);
+
+    let newsList2 = newsData.data.news[page];
+    let newList = this.data.newList.concat(newsList2);
+    let that = this;
+
+    // 获取数据
+    function getData () {
+      that.setData({
+        page,
+        newList,
+        loadFlag: true
+      })
+      setTimeout(function () {
+        that.setData({
+          loadFlag: false
+        })
+        console.log(that.data.loadFlag, "setTimeout");
+      },1000)
+    }
+    
+    if (getDataLen < allDataLen){ //数据还没有获取完
+      getData(); //获取数据
+    }else if (getDataLen === allDataLen) { //数据获取完了
+      this.setData({
+        loadMoreText: "数据已经到底"
+      })
+      console.log("数据已经到底")
+      getData();
+    }else {
+      return;
+    }
+    
+    
+    
 
   },
 
@@ -76,6 +124,7 @@ Page({
         userInfo: app.globalData.userInfo
       })
     }else {
+      getUserData();
       console.log("no userInfo")
     }
 

@@ -9,11 +9,10 @@
 
 <view class="collect">
   <text class="title">我的收藏（{{number}}）</text>
-  <view class="new-List">
+  <view class="new-List" wx:if="{{number}}">
     <view class="news" wx:for="{{newList}}" wx:key="index" bindtap="toDetail" data-id="{{item.id}}">
       <image src="{{item.poster}}"></image>
       <text>{{item.title}}</text>
     </view>
   </view>
-  
 </view>

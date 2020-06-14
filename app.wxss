@@ -141,7 +141,7 @@ button {
   color: #000;
   width: 120rpx !important;
   font-weight: 400 !important;
-  font-size: 24rpx !important;
+  font-size: 28rpx !important;
   padding: 0 !important;
 }
 
@@ -271,4 +271,7 @@ button {
   margin-left: 25rpx;
   line-height: 100rpx;
 
+}
+.colorRed {
+  color: red;
 }

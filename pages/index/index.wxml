@@ -3,7 +3,7 @@
   
   <button wx:if="{{!userInfo.avatarUrl}}" open-type="getUserInfo" bindgetuserinfo="getUserData">点击登录</button>
   <block wx:else>
-    <image src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '/pages/smallProject/images/index/lft01.jpg'}}"></image>
+    <image src="{{userInfo.avatarUrl}}"></image>
     <text class="nickName">{{userInfo.nickName ? userInfo.nickName : "未登录"}}</text>
   </block>
 </view>
@@ -14,7 +14,6 @@
  circular="true"
  previous-margin="10rpx"
  next-margin="10rpx"
- easing-function="easeInCubic"
  duration="1000">
   <!-- <view wx:for="bannerImg" wx:key="index">
     <swiper-item>
@@ -33,7 +32,12 @@
   </view>
 </view> 
 
-<view class="load_more">点击加载更多</view>
+<button 
+  class="load_more" 
+  loading="{{loadFlag}}"
+  hover-class="colorRed"
+  bindtap="loadMoreNews"
+>{{loadMoreText}}</button>
 
 <navigator class="toWeather" url="/pages/smallProject/pages/weather/weather" target="self" open-type="navigate">点击查看天气</navigator>
 <!-- 填写url时注意： 跳转的目标页面后面不能写 .wxml  -->
